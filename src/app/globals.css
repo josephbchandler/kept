@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f4f2ee;
+  --color-card: #e8e4dd;
+  --color-ink: #1f1d1a;
+  --color-muted: #6e685f;
+  --color-line: #dcd6cc;
+  --color-accent: #b4532a;
+  --color-accent-dark: #93421f;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
