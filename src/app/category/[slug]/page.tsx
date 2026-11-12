@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/container";
 import { PageHeading } from "@/components/page-heading";
-import { ProductGrid } from "@/components/product-grid";
+import { PriceFilteredProducts } from "@/components/price-filtered-products";
 import { getCategories, getCategory, getProductsInCategory } from "@/lib/catalog";
 import { pluralize } from "@/lib/format";
 
@@ -33,7 +33,7 @@ export default async function CategoryPage({ params }: PageProps<"/category/[slu
         meta={pluralize(items.length, "object")}
       />
       <div className="pt-10">
-        <ProductGrid products={items} />
+        <PriceFilteredProducts products={items} />
       </div>
     </Container>
   );
