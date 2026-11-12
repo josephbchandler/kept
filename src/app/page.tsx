@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/container";
+import { PriceFilteredProducts } from "@/components/price-filtered-products";
 import { ProductCard } from "@/components/product-card";
-import { ProductGrid } from "@/components/product-grid";
 import { SectionHeading } from "@/components/section-heading";
 import { products } from "@/data/products";
 import { countByCategory, getAllProducts, getBrandsWithCounts, getCategories, getProductsInCategory, getStaffPicks } from "@/lib/catalog";
@@ -82,7 +82,7 @@ export default function HomePage() {
         <div id="everything">
           <SectionHeading title="Recently added" href="/brands" linkLabel="Browse by brand" />
         </div>
-        <ProductGrid products={allProducts} />
+        <PriceFilteredProducts products={allProducts} />
       </section>
     </Container>
   );
