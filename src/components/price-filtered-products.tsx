@@ -23,7 +23,7 @@ export function PriceFilteredProducts({ products }: { products: Product[] }) {
               onClick={() => setActiveRange(active ? null : range.id)}
               className={`h-8 rounded-full border px-3.5 text-sm transition-colors ${
                 active
-                  ? "border-ink bg-ink text-paper"
+                  ? "border-accent bg-accent text-white hover:bg-accent-dark"
                   : "border-line text-muted hover:border-ink/30 hover:text-ink"
               }`}
             >
